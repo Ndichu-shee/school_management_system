@@ -9,3 +9,5 @@ class Event(models.Model):
     start_of_event = models.DateField()
     end_of_event = models.DateField()
     
+    def __str__(self):
+        return self.event_name

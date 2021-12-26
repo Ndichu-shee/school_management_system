@@ -1,5 +1,5 @@
 from django.db import models
-
+from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 class Trainer(models.Model):
     first_name = models.CharField(max_length=15)
@@ -7,15 +7,18 @@ class Trainer(models.Model):
     company = models.CharField(max_length=25)
     course_name = models.CharField(max_length=20)
     course = models.IntegerField()
-    gender = (
-        ('m','male')
-        ('f','female')
-    )
     email = models.EmailField()
-    joining_date = models.Datefield()
+    joining_date = models.DateField()
     salary = models.BigIntegerField()
-    city = models.CharField()
+    city = models.CharField(max_length=20)
     image = models.ImageField()
     resume = models.FileField()
     contract = models.FileField()
-    phone_number = models.PhoneNumberField()
+    phone_number = PhoneNumberField(unique = True, null = False, blank = False)
+    gender = (
+        ('m', 'male'),
+        ('f', 'female')
+    )
+
+    def __str__(self):
+        return self.first_name

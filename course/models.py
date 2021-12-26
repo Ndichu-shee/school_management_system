@@ -8,3 +8,5 @@ class Course(models.Model):
     description = models.TextField()
     syllabus = models.FileField()
     
+    def __str__(self):
+        return self.course_name
