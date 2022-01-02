@@ -6,7 +6,7 @@ class Course(models.Model):
     course_code = models.CharField(max_length=10)
     trainer_id =models.CharField(max_length=5)
     description = models.TextField()
-    syllabus = models.FileField()
+    syllabus = models.FileField(upload_to='images/')
     
     def __str__(self):
         return self.course_name

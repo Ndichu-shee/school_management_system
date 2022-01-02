@@ -11,7 +11,7 @@ class Trainer(models.Model):
     joining_date = models.DateField()
     salary = models.BigIntegerField()
     city = models.CharField(max_length=20)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='images/')
     resume = models.FileField()
     contract = models.FileField()
     phone_number = PhoneNumberField(unique = True, null = False, blank = False)

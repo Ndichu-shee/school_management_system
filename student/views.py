@@ -10,6 +10,9 @@ from django.shortcuts import (get_list_or_404,HttpResponseRedirect)
 from django.views.generic.edit import UpdateView
 
 
+
+
+
 #viewing all the students
 class StudentList(ListView):
     model = Student
@@ -18,6 +21,7 @@ class StudentList(ListView):
     def get_queryset(self, *args, **kwargs):
         all_students = super(StudentList, self).get_queryset(*args, **kwargs)
         return all_students
+       
 #registering a new student
 class StudentFormView(CreateView):
     template_name = 'add_student.html'

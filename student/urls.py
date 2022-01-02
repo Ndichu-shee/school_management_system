@@ -8,4 +8,5 @@ urlpatterns = [
     path('<id>/delete',delete_student,name='delete_student'),
     path('<id>/edit',edit_student,name='edit_student'),
     path('<id>/view',student_profile, name='student_profile'),
+
 ]

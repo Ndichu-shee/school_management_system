@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>School Management System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+  <h2>Registered Courses List</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Course Name</th>
+        <th scope="col">Course Code</th>
+        <th scope="col">Trainer Id</th>
+        <th scope="col">Description</th>
+        <th scope="col">Syllabus</th>
+       
+      </tr>
+    </thead>
+ 
+    <tbody>
+      {% for course in course_list%} 
+
+      <tr>
+
+        <td>{{course.course_name}}</td>
+        <td>{{course.course_code}}</td>
+     
+        <td>{{course.trainer_id}}</td>
+    
+        <td>{{course.description}}</td>
+       
+        <td><img src="{{ course.syllabus.url }}"width="100" height="100"/></td>
+       
+
+
+        <td><a href ="{{course.id}}/delete"><button type="submit" class="save btn btn-danger">Delete</button></td></a>
+        <td><a href ="{{course.id}}/edit"><button type="submit" class="save btn btn-success">Edit</button></td></a>
+        <td><a href ="{{course.id}}/view"><button type="submit" class="save btn btn-info">Profile</button></td></a>
+
+
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+              
+</body>
+<style>
+  h2{
+    text-align: center;
+  }
+</style>
+</html>
