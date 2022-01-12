@@ -1,2 +1,2 @@
-web: gunicorn school_system.wsgi:application --log-file=-
+web: gunicorn school_system.wsgi
 
