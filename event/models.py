@@ -6,8 +6,8 @@ class Event(models.Model):
     date_of_event = models.DateField()
     description = models.TextField()
     venue = models.CharField(max_length=30)
-    start_of_event = models.DateField()
-    end_of_event = models.DateField()
+    start_of_event = models.SmallIntegerField()
+    end_of_event = models.SmallIntegerField()
     
     def __str__(self):
         return self.event_name

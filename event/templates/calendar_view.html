@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>School Management System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+  <h2>Registered Students List</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Event Name</th>
+        <th scope="col">Date Of Event</th>
+        <th scope="col">Description</th>
+        <th scope="col">Venue</th>
+        <th scope="col">Start Of Event</th>
+        <th scope="col">End Of Event</th>
+       
+      </tr>
+    </thead>
+ 
+    <tbody>
+      {% for event in calendar_view%} 
+
+      <tr>
+
+        <td>{{event.event_name}}</td>
+        <td>{{event.date_of_event }</td>
+     
+        <td>{{event.description}}</td>
+    
+        <td>{{event.venue}}</td>
+       
+        <td>{{event.start_of_event}}</td>
+        <td>{{event.end_of_event }}</td>
+       
+     
+     
+
+
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+              
+</body>
+<style>
+  h2{
+    text-align: center;
+  }
+</style>
+</html>

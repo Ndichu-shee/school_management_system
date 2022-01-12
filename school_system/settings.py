@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'student',
     'trainer',
     'crispy_forms',
+    'api',
+    'rest_framework',
     
 ]
 
