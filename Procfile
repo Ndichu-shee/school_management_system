@@ -1,1 +1,1 @@
-web: gunicorn school-system.wsgi --log-file -
+web: gunicorn school_system.wsgi --log-file -
