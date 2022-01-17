@@ -6,7 +6,7 @@ from trainer.views import Trainer
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ('first_name','last_name','age','nationality','date_of_birth','class_name','nationality_id','email','admission_date','academic_year','guardians_contact','student_contact','room')
+        fields = ('first_name','last_name','age','nationality','date_of_birth','class_name','nationality_id','email','admission_date','academic_year','image','guardians_contact','student_contact','room')
 
 class TrainerSerializer(serializers.ModelSerializer):
     class Meta:

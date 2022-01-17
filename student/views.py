@@ -10,7 +10,8 @@ from django.shortcuts import (get_list_or_404,HttpResponseRedirect)
 from django.views.generic.edit import UpdateView
 
 
-
+def home(request):
+    return render (request, 'navbar.html')
 
 
 #viewing all the students

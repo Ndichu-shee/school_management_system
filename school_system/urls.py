@@ -18,13 +18,15 @@ from django.urls import path
 from django.urls.conf import include
 from django.conf import settings
 from django.contrib.staticfiles.urls import static
-
+from rest_framework.schemas import get_schema_view
+from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('student.urls')),
-    path('trainers/', include('trainer.urls')),
-    path('courses/',include('course.urls')),
+    path('', include('student.urls', namespace="student")),
+    path('trainers/', include('trainer.urls', namespace="trainer")),
+    path('courses/',include('course.urls', namespace="course")),
     path('events/',include('event.urls')),
     path('all/', include('api.urls')),
-
+    path('openapi/', get_schema_view(title="School Management System",description="School Management System"), name='openapi-schema'),
+    path('docs/', TemplateView.as_view(template_name='documentation.html',extra_context={'schema_url':'openapi-schema'}), name='swagger-ui'),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
