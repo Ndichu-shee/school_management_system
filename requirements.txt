@@ -11,3 +11,4 @@ gunicorn==19.9.0
 psycopg2==2.9.2
 djangorestframework==3.13.1
 django-rest-swagger==2.2.0
+PyYAML==6.0
