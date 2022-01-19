@@ -28,7 +28,7 @@ class StudentFormView(CreateView):
     template_name = 'add_student.html'
     form_class = StudentForm
     model = Student
-    success_url = reverse_lazy('students-list')
+    success_url = reverse_lazy('student:student')
 
   #deleting a student
 def delete_student(request, id):
@@ -36,7 +36,7 @@ def delete_student(request, id):
    
     if request.method =="POST":
        student.delete()
-       return HttpResponseRedirect("/")
+       return HttpResponseRedirect("/students")
     return render(request, 'delete_student.html', {'student':student})
 
 #editing student details

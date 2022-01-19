@@ -20,7 +20,7 @@ class CoursesFormView(CreateView):
     form_class = CourseForm
     model = Course
     template_name = 'add_course.html'
-    success_url = reverse_lazy('courses_list')
+    success_url = reverse_lazy('course:course')
 
 def delete_course(request, id):
     course = Course.objects.get(id =id)

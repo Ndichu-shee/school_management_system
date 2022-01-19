@@ -23,7 +23,7 @@ class TrainersFormView(CreateView):
     form_class =  TrainerForm
     model = Trainer
     template_name = 'add_trainer.html'
-    success_url =reverse_lazy('trainers_list')
+    success_url =reverse_lazy('trainer:trainer')
 
 def delete_trainer(request, id):
     trainer = Trainer.objects.get(id = id)
