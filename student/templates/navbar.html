@@ -4,7 +4,7 @@
 <head>
   <title>School Management System</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -51,7 +51,24 @@
     </div>
   </div>
 </nav>
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item">Registered Students<div class="total-count">
+      <h4>{{ top_data.0.0 }}</h4>
+  </div></li>
+    <li class="list-group-item">Registered Trainers<div class="info-content">
+      <div class="total-count">
+          <h4>{{ top_data.0.1 }}</h4>
+      </div>
+  </div></li>
+    <li class="list-group-item">Registered Courses<div class="total-count">
+      <h4>{{ top_data.0.2 }}</h4>
+  </div></li>
+  </ul>
+</div>
 
+
+     
 </body>
 
 {%endblock body%}
@@ -67,8 +84,19 @@
   body{
     background-image: url("media/c.webp");
     background-repeat: no-repeat;
-    background-size: 1300px 1300px;
+    background-size: 750px 600px;
   }
+  .drone-info{
+    padding-left: 20px
+  }
+  .container{
+    padding-left: 700px;
+    padding-top: 120px;
+  }
+.list-group-item{
+  background-color: #f5e6f3;
+}
+
 
 
 

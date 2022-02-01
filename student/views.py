@@ -8,10 +8,20 @@ from django.views.generic import CreateView
 from django.urls import reverse_lazy
 from django.shortcuts import (get_list_or_404,HttpResponseRedirect)
 from django.views.generic.edit import UpdateView
+from trainer.models import Trainer
+from course.models import Course
 
 
 def home(request):
-    return render (request, 'navbar.html')
+    data = []
+    total_students = Student.objects.all().count()
+    total_trainers =Trainer.objects.all().count() 
+    total_courses = Course.objects.all().count()
+    data.append([total_students,total_trainers, total_courses])
+    
+    return render (request, 'navbar.html', {'top_data':data})
+
+
 
 
 #viewing all the students
@@ -57,3 +67,5 @@ def edit_student(request, id):
 def student_profile(request, id):
     student = Student.objects.get(id=id)
     return render(request,'student_profile.html',{'student':student})
+
+
