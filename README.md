@@ -1,6 +1,7 @@
 **School Management System**
 This is a Django+Bootsrap project
-
+<br>
+<br>
 
 **Getting Started**
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
