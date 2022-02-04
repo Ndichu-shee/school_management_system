@@ -1,9 +1,26 @@
-# school_management_system
-A school management system built in Django and Bootstrap
+School Management System
+This is a Django+Bootsrap project
+
 Getting Started
-Prequisities
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+Prerequisites
 Python 3
 PostgreSQL
- 
-#Installing
-Create a postgressql database schooldb, and a user with superuser priviledges to own the database, by default the credentials can be the same as the username and password in env.sh.template: export DATABASE_URL = postgres://schooluser:<password>@localhost:5432/schooldb
+
+Installing
+Create a postgresql database schooldb, and a user with superuser privileges to own the database, by default the credentials can be the same as the username and password in env.sh.template: export DATABASE_URL = postgres://schooluser:<password>@localhost:5432/schooldb
+
+sudo -u postgres createuser schooldbuser --superuser
+$ sudo -u postgres psql
+
+postgres=# ALTER USER schooldbuser WITH PASSWORD 'Utu@123';
+
+postgres=# \q
+
+Create the database
+
+sudo -u postgres createdb schooldb -O schooldbuser
+Migrate the database
+
+python manage.py migrate
