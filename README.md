@@ -29,9 +29,9 @@ sudo -u postgres createuser schooldbuser --superuser
 
 *postgres=# \q*
 
-Create the database
+***Create the database***
 
 *sudo -u postgres createdb schooldb -O schooldbuser*
-Migrate the database
+***Migrate the database***
 
 *python manage.py migrate*
