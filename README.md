@@ -19,12 +19,13 @@ PostgreSQL
 <br>
 Create a postgresql database schooldb, and a user with superuser privileges to own the database, by default the credentials can be the same as the username and password in env.sh.template: 
 <br>
+<br>
 *export DATABASE_URL = postgres://schooluser:<password>@localhost:5432/schooldb*
 
 sudo -u postgres createuser schooldbuser --superuser
 *$ sudo -u postgres psql*
 
-*postgres=# ALTER USER schooldbuser WITH PASSWORD 'Utu@123';*
+*postgres=# ALTER USER schooldbuser WITH PASSWORD 'school@123';*
 
 *postgres=# \q*
 
