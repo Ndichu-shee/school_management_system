@@ -1,0 +1,1 @@
+export DATABASE_URL=postgres://schooluser:school@123@localhost:5432/schooldb
