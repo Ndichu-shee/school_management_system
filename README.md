@@ -33,6 +33,7 @@ sudo -u postgres createuser schooldbuser --superuser
 ***Create the database***
 
 *sudo -u postgres createdb schooldb -O schooldbuser*
+  <br>
 ***Migrate the database***
 
 *python manage.py migrate*
